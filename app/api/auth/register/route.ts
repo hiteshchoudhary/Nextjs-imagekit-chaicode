@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     if (existingUser) {
       return NextResponse.json(
         { error: "User already registered" },
-        { status: 400 }
+        { status: 400  }
       );
     }
 
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { message: "User registered successfully" },
-      { status: 400 }
+      { status: 201 }
     );
   } catch (error) {
     console.error("Registration error", error);
